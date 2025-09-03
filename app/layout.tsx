@@ -20,10 +20,68 @@ const instrumentSerif = Instrument_Serif({
   display: "swap",
 })
 
+
 export const metadata: Metadata = {
-  title: "Spotigence Industries — Coming Soon",
+  title: "Spotigence Industries | Robotics, AI Autonomy & Intelligent Machines",
   description:
-    "Intelligent robotics for the real world. Vision-driven autonomy, perception, planning, and onboard AI. Join the waitlist.",
+    "Spotigence Industries builds intelligent robotics for the real world. Vision-driven autonomy, advanced perception, planning systems, and onboard AI. Join our waitlist to explore next-gen automation.",
+  keywords: [
+    "Spotigence",
+    "robotics startup",
+    "AI robotics",
+    "autonomous robots",
+    "vision-driven autonomy",
+    "perception and planning",
+    "intelligent machines",
+    "robotics AI company",
+  ],
+  authors: [{ name: "Spotigence Industries", url: "https://www.spotigenceindustries.com/" }],
+  creator: "Spotigence Industries",
+  publisher: "Spotigence Industries",
+  metadataBase: new URL("https://www.spotigenceindustries.com/"),
+
+  openGraph: {
+    title: "Spotigence Industries — Robotics & AI Autonomy",
+    description:
+      "Intelligent robotics for the real world. Vision-driven autonomy, perception, planning, and onboard AI.",
+    url: "https://www.spotigenceindustries.com/",
+    siteName: "Spotigence Industries",
+    images: [
+      {
+        url: "/favicon-32x32.png",
+        width: 1200,
+        height: 630,
+        alt: "Spotigence Industries Logo and Robotics AI Tagline",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Spotigence Industries | Robotics & AI Autonomy",
+    description:
+      "Robotics startup building vision-driven autonomy, onboard AI, and intelligent machines.",
+    images: ["/favicon-32x32.png"],
+    creator: "@spotigenceindustries",
+  },
+
+  icons: {
+    icon: "/favicon-32x32.png",
+    shortcut: "/favicon.ico",
+    apple: "/favicon-32x32.png",
+  },
+
+  alternates: {
+    canonical: "https://www.spotigenceindustries.com/",
+  },
+
+  other: {
+    "contact:email": "info@spotigenceindustries.com",
+    "contact:phone_number": "+91-9014982291",
+    "contact:address": "opposite zp highschool , datti village , dattirajeru sub-district vizianagaram district , andhrapradesh pincode:535580, india",
+  },
 }
 
 export default function RootLayout({
