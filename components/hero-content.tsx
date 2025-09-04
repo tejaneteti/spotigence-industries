@@ -2,7 +2,16 @@
 
 export default function HeroContent() {
   return (
-    <main className="absolute bottom-8 left-8 z-20 max-w-lg md:max-w-xl">
+    <div className="w-full">
+       <div className="flex   justify-center items-center w-full">
+        <img
+          src="logo.png"
+          className="w-[50%]  z-10 aspect-square md:w-[40%] lg:w-[30%]"
+          alt="Spotigence Industries Logo"
+        />
+      </div>
+    <main className="absolute bottom-8 left-8 z-20 max-w-lg md:max-w-xl w-full">
+      
       <div className="text-left">
         {/* Badge */}
         <div
@@ -17,11 +26,11 @@ export default function HeroContent() {
         <h1 className="text-5xl md:text-6xl tracking-tight font-light text-white mb-4 text-pretty">
           Coming Soon
           <br />
-          <span className="font-light text-white/90">Intelligent Robotics for the Real World</span>
+          <span className="font-light text-white/90">Intelligent Systems for the Real World</span>
         </h1>
 
         <p className="text-sm font-light text-white/75 mb-6 leading-relaxed">
-          We’re building vision-driven autonomy—merging perception, planning, and onboard AI into deployable robotics
+          We’re building vision-driven autonomy—merging perception, planning, and onboard AI into deployable systems
           systems. We’re not ready yet, but we will be soon.
         </p>
 
@@ -42,5 +51,6 @@ export default function HeroContent() {
         </div>
       </div>
     </main>
+    </div>
   )
 }

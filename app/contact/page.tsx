@@ -108,7 +108,7 @@ export default function ContactPage() {
               type="text"
               autoComplete="organization"
               className="w-full px-3 py-2 rounded-md bg-white/5 border border-white/10 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white/20"
-              placeholder="Acme Robotics"
+              placeholder="Acme Systems"
             />
           </div>
 

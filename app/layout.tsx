@@ -22,18 +22,18 @@ const instrumentSerif = Instrument_Serif({
 
 
 export const metadata: Metadata = {
-  title: "Spotigence Industries | Robotics, AI Autonomy & Intelligent Machines",
+  title: "Spotigence Industries | Systems, AI Autonomy & Intelligent Machines",
   description:
-    "Spotigence Industries builds intelligent robotics for the real world. Vision-driven autonomy, advanced perception, planning systems, and onboard AI. Join our waitlist to explore next-gen automation.",
+    "Spotigence Industries builds intelligent systems for the real world. Vision-driven autonomy, advanced perception, planning systems, and onboard AI. Join our waitlist to explore next-gen automation.",
   keywords: [
     "Spotigence",
-    "robotics startup",
-    "AI robotics",
+    "systems startup",
+    "AI systems",
     "autonomous robots",
     "vision-driven autonomy",
     "perception and planning",
     "intelligent machines",
-    "robotics AI company",
+    "systems AI company",
   ],
   authors: [{ name: "Spotigence Industries", url: "https://www.spotigenceindustries.com/" }],
   creator: "Spotigence Industries",
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.spotigenceindustries.com/"),
 
   openGraph: {
-    title: "Spotigence Industries — Robotics & AI Autonomy",
+    title: "Spotigence Industries — Systems & AI Autonomy",
     description:
-      "Intelligent robotics for the real world. Vision-driven autonomy, perception, planning, and onboard AI.",
+      "Intelligent systems for the real world. Vision-driven autonomy, perception, planning, and onboard AI.",
     url: "https://www.spotigenceindustries.com/",
     siteName: "Spotigence Industries",
     images: [
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
         url: "/favicon-32x32.png",
         width: 1200,
         height: 630,
-        alt: "Spotigence Industries Logo and Robotics AI Tagline",
+        alt: "Spotigence Industries Logo and Systems AI Tagline",
       },
     ],
     locale: "en_US",
@@ -60,9 +60,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Spotigence Industries | Robotics & AI Autonomy",
+    title: "Spotigence Industries | Systems & AI Autonomy",
     description:
-      "Robotics startup building vision-driven autonomy, onboard AI, and intelligent machines.",
+      "Systems startup building vision-driven autonomy, onboard AI, and intelligent machines.",
     images: ["/favicon-32x32.png"],
     creator: "@spotigenceindustries",
   },
