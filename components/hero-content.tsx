@@ -1,14 +1,27 @@
+
+
 "use client"
+import dynamic from "next/dynamic"
+
+const LogoModel = dynamic(() => import("./logo"), {
+  ssr: false,
+  loading: () => (
+    <div className="relative w-full aspect-square md:aspect-video flex items-center justify-center">
+      <img
+        src="logo.png"
+        className="max-w-[50%] md:max-w-[40%] lg:max-w-[20%]"
+        alt="Spotigence Industries Logo"
+      />
+    </div>
+  ),
+})
 
 export default function HeroContent() {
   return (
     <div className="w-full">
-       <div className="flex   justify-center items-center w-full">
-        <img
-          src="logo.png"
-          className="w-[50%]  z-10 aspect-square md:w-[40%] lg:w-[30%]"
-          alt="Spotigence Industries Logo"
-        />
+       <div className="flex-1flex  justify-center items-center w-full">
+       <LogoModel />
+
       </div>
     <main className="absolute bottom-8 left-8 z-20 max-w-lg md:max-w-xl w-full">
       

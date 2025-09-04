@@ -2,7 +2,7 @@
 
 export default function Header() {
   return (
-    <header className="relative z-20 flex items-center justify-between p-6">
+    <header className="absolute w-full z-20 flex items-center justify-between p-6 top-0">
       {/* Brand */}
       <a
         href="https://spotigenceindustries.com/"
