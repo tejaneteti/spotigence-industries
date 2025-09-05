@@ -1,21 +1,56 @@
 
 
 "use client"
+import { AnimatePresence, motion } from "framer-motion"
 import dynamic from "next/dynamic"
+import { useEffect, useState } from "react"
 
-const LogoModel = dynamic(() => import("./logo"), {
+
+// Lazy load the 3D model with no SSR
+const LogoModel3D = dynamic(() => import("./logo"), {
   ssr: false,
-  loading: () => (
-    <div className="relative w-full aspect-square md:aspect-video flex items-center justify-center">
-      <img
-        src="logo.png"
-        className="max-w-[50%] md:max-w-[40%] lg:max-w-[20%]"
-        alt="Spotigence Industries Logo"
-      />
-    </div>
-  ),
 })
 
+ function LogoModel() {
+  const [mounted, setMounted] = useState(false)
+
+  // Small delay to let 3D mount & fade nicely
+  useEffect(() => {
+    const t = setTimeout(() => setMounted(true), 300) 
+    return () => clearTimeout(t)
+  }, [])
+
+  return (
+    <div className="relative w-full aspect-square md:aspect-video flex items-center justify-center">
+      <AnimatePresence mode="wait">
+        {!mounted && (
+          <motion.img
+            key="loading"
+            src="cirrus.png"
+            alt="Spotigence Industries Logo"
+            className="max-w-[90%] md:max-w-[80%] lg:max-w-[70%] absolute"
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, scale: 0.98 }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
+          />
+        )}
+        {mounted && (
+          <motion.div
+            key="3d"
+            className="w-full h-full"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
+          >
+            <LogoModel3D />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
 export default function HeroContent() {
   return (
     <div className="w-full">
