@@ -58,7 +58,7 @@ export default function HeroContent() {
        <LogoModel />
 
       </div>
-    <main className="absolute bottom-8 left-8 z-20 max-w-lg md:max-w-xl w-full">
+    <main className="absolute bottom-8 left-8 z-20 max-w-lg md:max-w-xl">
       
       <div className="text-left">
         {/* Badge */}
