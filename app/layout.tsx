@@ -4,6 +4,7 @@ import { Figtree } from "next/font/google"
 import { GeistMono } from "geist/font/mono"
 import { Instrument_Serif } from "next/font/google"
 import "./globals.css"
+import { GlassmorphismNav } from "@/components/GlassmorphismNav"
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -91,7 +92,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${figtree.variable} ${instrumentSerif.variable} ${GeistMono.variable}`}>
-      <body>{children}</body>
+      <body>
+        <GlassmorphismNav />
+        {children}
+      </body>
     </html>
 
   )

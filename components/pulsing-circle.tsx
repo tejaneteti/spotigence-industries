@@ -26,7 +26,7 @@ export default function PulsingCircle() {
                     thickness={0.15}
                     softness={0.2}
                     intensity={5}
-                    spotsPerColor={5}
+                    // spotsPerColor={5}
                     spotSize={0.1}
                     pulse={0.15}
                     smoke={0.5}
