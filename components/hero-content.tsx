@@ -3,7 +3,7 @@
 "use client"
 import { AnimatePresence, motion } from "framer-motion"
 import dynamic from "next/dynamic"
-import { useEffect, useState } from "react"
+import { Suspense, useEffect, useState } from "react"
 
 
 // Lazy load the 3D model with no SSR
@@ -54,8 +54,10 @@ const LogoModel3D = dynamic(() => import("./logo"), {
 export default function HeroContent() {
   return (
     <div className="w-full">
-       <div className="flex-1flex  justify-center items-center w-full">
-       <LogoModel />
+       <div className="flex-1 flex  justify-center items-center w-full">
+        <Suspense fallback={null}>
+            <LogoModel />
+        </Suspense>
 
       </div>
     <main className="absolute bottom-8 left-8 z-20 max-w-lg md:max-w-xl">

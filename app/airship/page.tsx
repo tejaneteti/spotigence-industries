@@ -3,10 +3,13 @@
 import HeroContent from "@/components/hero-content"
 import PulsingCircle from "@/components/pulsing-circle"
 import ShaderBackground from "@/components/shader-background"
-import FogDispersalPage from "./fog-dispersal/page"
 
-export default function ShaderShowcase() {
+export default function Airship() {
   return (
-   <FogDispersalPage/>
+    <ShaderBackground>
+      {/* <Header /> */}
+      <HeroContent />
+      <PulsingCircle />
+    </ShaderBackground>
   )
 }

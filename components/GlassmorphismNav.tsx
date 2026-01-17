@@ -8,8 +8,8 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 
 const navigation = [
-    { name: "Airship", href: "/" },
-    { name: "Fog Dispersal", href: "/fog-dispersal" },
+    { name: "Fog Dispersal", href: "/" },
+    { name: "Airship", href: "/airship" },
     { name: "Drones", href: "/drones" },
     { name: "Floating LED Walls", href: "/floating-led-walls" },
 ]
